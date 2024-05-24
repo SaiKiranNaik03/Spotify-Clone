@@ -16,9 +16,8 @@ body{
 }
 
 .sidebar{
-    /* overflow: auto; */
     background-color: black;
-    height:100vh;
+    height:88vh;
     width: 350px;
     margin: 5px;
     margin-left: 3px;
@@ -34,8 +33,10 @@ body{
     margin-right: 6px;
     border-radius: 1rem; /* 16px */
     overflow: auto;
+}
 
-
+.main-content::-webkit-scrollbar {
+    display: none;
 }
 
 .music-player{
@@ -94,13 +95,15 @@ a{
 /* Library */
 
 .library{
-    overflow:scroll;
+    overflow:auto;
     background-color: #121212;
     margin: 5px;
-    height: 100vh;
+    height: 63.7vh;
     border-radius: 1rem;
     padding: 0.5rem;
-
+}
+.library::-webkit-scrollbar {
+    display: none;
 }
 
 .option{
@@ -131,11 +134,8 @@ a{
 .box{
     border-radius: 1rem;
     background-color: #232323;
-    /* height:7rem; */
     padding:0.25rem 1rem;
     margin: 0.5rem 0;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .box-p1{
@@ -169,7 +169,6 @@ button:hover{
 /* navbar */
 
 .main-navbar{
-    /* border: solid wheat 2px; */
     position: sticky;
     top:0;
     background-color: #121212;
@@ -177,6 +176,7 @@ button:hover{
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0.75rem;
+    border-bottom: solid #8d8a8a 1px;
 }
 
 .navbar-right{
@@ -203,7 +203,6 @@ button:hover{
 .card{
     width: 170px;
     background-color: #232323;
-    /* border-radius: 0.75rem; */
     padding: 10px;
     margin: 0.5rem;
 }
@@ -248,7 +247,6 @@ button:hover{
 }
 
 .content{
-    /* height: 200px; */
     width: 10rem;
     display: flex;
     flex-direction: column;
@@ -268,12 +266,19 @@ button:hover{
     opacity: 0.7;
 }
 
-
-/* .footer-p2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.content-icon{
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+.content-icon:hover{
+    transition-duration: 1.2s;
+    scale: 1.1;
+    opacity: 1;
+}
 
 .line{
     align-self: center;
@@ -367,9 +372,7 @@ button:hover{
 /* album */
 
 .album{
-    /* border: solid 2px wheat; */
     display:flex;
-    /* justify-content:space-around; */
     align-items: center;
 }
 
@@ -389,13 +392,13 @@ button:hover{
     font-size: 0.7rem;
     opacity: 0.7;
 }
-.music-i{
+.music-icon{
     font-size: 1.25rem;
-    margin-left:3rem;
+    margin:0 0.5rem;
     opacity: 0.7;
 }
-/* controls */
 
+/* controls */
 .music-icons{
     display: flex;
     justify-content:center;
@@ -408,33 +411,27 @@ button:hover{
 }
 
 .volume{
+    appearance: none;
     cursor: pointer;
-    /* appearance: none; */
+    background-color: transparent;
 }
 
 .volume::-webkit-slider-runnable-track{
-    /* appearance: none; */
     height: 0.5rem;
     background-color: #ddd;
     border-radius: 100px;
 }
 
-/* .volume::-webkit-slider-runnable-track{
-    appearance: none;
-    background-color: transparent;
-    background-color: #ddd;
-    border-radius: 50px;
-    height: 0.3rem;
-} */
-
 .volume::-webkit-slider-thumb{
     appearance: none !important;
-    /* background-color: #bbb5b5; */
-    margin-top: -3.5px;
+    height: 13px;
+    width: 13px;
+    background-color: #353434;
+    border-radius: 50%;
+    margin-top: -2px;
 }
 
-.theam:checked{
-    body{
-        background-color: aliceblue;
-    }
+i:hover{
+    opacity: 1;
+    cursor: pointer;
 }
